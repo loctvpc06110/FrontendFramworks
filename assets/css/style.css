@@ -1,4 +1,7 @@
-
 a {
     text-decoration: none;
+}
+
+.custom-height-slide {
+    height: 70vh;
 }
