@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Study Bootstrap</title>
+</head>
+
+<body>
+    <!-- Header  -->
+    <header class="container">
+        <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
+            <a href="../index.html"
+                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img src="../assets/images/logo.png" alt="logo" class="w-25">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="../index.html" class="nav-link px-2 link-secondary">Trang Chủ</a></li>
+                <li><a href="./about.html" class="nav-link px-2 link-dark">Giới Thiệu</a></li>
+                <li><a href="./shop.html" class="nav-link px-2 link-dark">Sản Phẩm</a></li>
+                <li><a href="./contact.html" class="nav-link px-2 link-dark">Liên Hệ</a></li>
+                <li><a href="./help.html" class="nav-link px-2 link-dark">Hỗ Trợ</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <a href="./login.html"><button type="button" class="btn btn-outline-secondary me-2">Đăng
+                        Nhập</button></a>
+                <a href="./register.html"><button type="button" class="btn btn-secondary">Đăng Ký</button></a>
+            </div>
+        </div>
+    </header>
+    <!-- Header  -->
+
+    <!-- Banner -->
+    <section class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fst-italic">Cửa Hàng</h1>
+                <p class="lead my-3">inox cửa hàng đồ gia dụng với những sản phẩm hiện đại, sang trọng, giá cả phải
+                    chăng tha hồ mà lựa </p>
+            </div>
+        </div>
+    </section>
+    <!-- Banner -->
+
+    <!-- Shop -->
+    <section class="container my-5">
+        <div class="py-1 text-center container">
+            <div class="row pb-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-bolder">Cửa Hàng inox</h1>
+                    <p class="lead text-muted">Sản phẩm chất lượng giá cả hợp lý ngại gì không mua !</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">Tất cả</a>
+                    <a href="#" class="list-group-item list-group-item-action">Phòng Bếp</a>
+                    <a href="#" class="list-group-item list-group-item-action">Phòng Tắm</a>
+                    <a href="#" class="list-group-item list-group-item-action">Phòng Khách</a>
+                    <a href="#" class="list-group-item list-group-item-action">Phòng Ngủ</a>
+                </div>                  
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_01.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Bếp</a></p>
+                                    <p class="small text-danger"><s>250.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bếp Lẩu Nướng 2 Ngăn</h5>
+                                        <h6 class="text-dark mb-0">225.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_02.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Bếp</a></p>
+                                    <p class="small text-danger"><s>177.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Nồi Điện Cao Cấp</h5>
+                                        <h6 class="text-dark mb-0">159.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_05.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Tắm</a></p>
+                                    <p class="small text-danger"><s>134.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bộ 3 Cọ Vệ Sinh Bồn Cầp</h5>
+                                        <h6 class="text-dark mb-0">120.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_06.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Tắm</a></p>
+                                    <p class="small text-danger"><s>406.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Giá Lưu Trữ MEIDOO Đa Năng</h5>
+                                        <h6 class="text-dark mb-0">365.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_09.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Khách</a></p>
+                                    <p class="small text-danger"><s>1.260.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bàn trà sofa ANA</h6>
+                                    <h6 class="text-dark mb-0">$1.134.000đ</h6>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_10.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Khách</a></p>
+                                    <p class="small text-danger"><s>480.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bình Hoa Thủy Tinh</h6>
+                                    <h6 class="text-dark mb-0">432.000đ</h6>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_13.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Ngủ</a></p>
+                                    <p class="small text-danger"><s>479.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Tủ Quần Áo Nhựa</h6>
+                                    <h6 class="text-dark mb-0">$431.000đ</h6>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Nổi Bật !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-10%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_14.jpg" class="card-img-top px-3 pb-3"
+                                alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Ngủ</a></p>
+                                    <p class="small text-danger"><s>2.399.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bàn Trang Điểm</h6>
+                                    <h6 class="text-dark mb-0">2.159.000đ</h6>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Bán Chạy !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-20%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_03.jpg"
+                                class="card-img-top px-3 pb-3" alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Bếp</a></p>
+                                    <p class="small text-danger"><s>250.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bộ Dao 5 Món</h5>
+                                    <h6 class="text-dark mb-0">225.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Bán Chạy !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-20%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_02.jpg"
+                                class="card-img-top px-3 pb-3" alt="Sảnh sản phẩm" />
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Bếp</a></p>
+                                    <p class="small text-danger"><s>177.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Nồi Điện Cao Cấp</h5>
+                                    <h6 class="text-dark mb-0">159.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Bán Chạy !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-20%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_07.jpg"
+                                class="card-img-top px-3 pb-3" alt="Sảnh sản phẩm"/>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Tắm</a></p>
+                                    <p class="small text-danger"><s>134.000đ</s></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bộ Máy Nước Nóng</h5>
+                                    <h6 class="text-dark mb-0">120.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-3">
+                                <p class="lead mb-0 fs-6">Ưu đãi Bán Chạy !</p>
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                                    style="width: 35px; height: 35px;">
+                                    <p class="text-white mb-0 small">-20%</p>
+                                </div>
+                            </div>
+                            <img src="../assets/images/products/prod_08.jpg"
+                                class="card-img-top px-3 pb-3" alt="Sảnh sản phẩm"/>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small"><a href="#!" class="text-muted">Phòng Tắm</a></p>
+                                    <p class="small text-danger"><s>406.000đ</s></p>
+                                </div>  
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="mb-0 custom-w-name">Bòn Tắm Gấp Gọn</h5>
+                                    <h6 class="text-dark mb-0">365.000đ</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <a href="#"><button class="btn btn-outline-secondary">Xem</button></a>
+                                        <a href="#"><button class="btn btn-outline-primary">Mua Ngay</button></a>
+                                    </div>
+                                    <div class="ms-auto text-warning fs-3">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link">Lùi</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Tiến</a>
+              </li>
+            </ul>
+          </nav>
+    </section>
+    <!-- Shop -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="text-muted mt-5">
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="../assets/images/logo.png" class="w-25" alt="logo">
+                        </h6>
+                        <p>
+                            inox Cửa hàng trực tuyến đồ dùng gia dụng, 1 cửa hàng có kiến thức - kinh nghiệm - trải
+                            nghiệm
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Về Chúng Tôi
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Trang Chủ</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Giới Thiệu</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Liên Hệ</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Hỗ Trợ</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Loại Sản Phẩm
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Gia Dụng Phòng Bếp</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Gia Dụng Phòng Tắm</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Gia Dụng Phòng Khách</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Gia Dụng Phòng Ngủ</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Liên Hệ</h6>
+                        <p><i class="fas fa-home me-3"></i> Can Tho City, FPT Polytechnic</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            loctvpc06110@fpt.edu.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 84 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 84 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-dark text-gray">
+            © 2024 : PC06110 - Thái Văn Lộc
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Js -->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
