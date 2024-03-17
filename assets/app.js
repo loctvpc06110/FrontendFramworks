@@ -5,17 +5,25 @@ app.controller("myCtrl", myFunction);
 
 function myFunction($scope) {
     // Biến mess
-    $scope.mess = "Hello Bro !";
+    // $scope.mess = "Hello Bro !";
 
     // Mảng Đối tượng info
     $scope.info = [
         {
+            id: 1,
             name: 'Thái Lộc',
             age: 18,
             address: 'Cần Thơ City'
         },
         {
+            id: 2,
             name: 'Jocol',
+            age: 18,
+            address: 'Cần Thơ City'
+        },
+        {
+            id: 3,
+            name: 'Lộc Kar',
             age: 18,
             address: 'Cần Thơ City'
         }
@@ -43,4 +51,24 @@ function myFunction($scope) {
             price: 34
         }
     ]
+
+    $scope.showMess = function(){
+        $scope.mess = "Hello Bro !";
+    };
+
+    $scope.deleteSV = function(index){
+        $scope.info.splice(index, 1)
+    }
+
+    $scope.uppercaseInput = function() {
+        $scope.yourName = $scope.fullName;
+        // $scope.yourName = $scope.fullName.toUpperCase();;
+    }
+
+    $scope.submitted = false;
+
+    $scope.submitData = function() {
+        $scope.submitted = true;
+    }
 }
+
