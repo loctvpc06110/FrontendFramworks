@@ -11,7 +11,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./main.js"></script>
 </head>
 
 <body>
@@ -31,16 +32,10 @@
                                 chủ</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-list pr-2"></i> Giới thiệu</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-list pr-2"></i> Danh sách sinh viên</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Liên hệ</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-envelope"></i> Góp ý</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-question"></i> Hỏi đáp</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Thông tin sinh viên</a>
                         </li>
                         <li class="nav-item px-2">
                             <div class="dropdown">
@@ -113,9 +108,179 @@
                 </div>
             </section>
 
-           
-
-
+            <section class="row content mt-3" ng-app="appShop">
+                <div class="col-9 border-end border-2">
+                    <div class="studentInfor border rounded" ng-controller="controllerShop">
+                        <div class="title border border-top py-2 px-3 bg-light">Thông tin sinh viên</div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form class="px-3" ng-submit="sendData()">
+                                    <div class="form-group my-3">
+                                      <label>Mã số sinh viên</label>
+                                      <input ng-model="mssv" type="text" class="form-control" placeholder="Nhập MSSV">
+                                    </div>
+                                    <div class="form-group my-3">
+                                      <label">Họ Và tên</label>
+                                      <input ng-model="fullName" type="text" class="form-control" placeholder="Nhập họ và tên">
+                                    </div>
+                                    <div class="form-group my-3">
+                                        <label>Giới tính</label>
+                                        <select ng-model="gender" class="form-control">
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group my-3">
+                                        <label>Địa chỉ</label>
+                                        <input ng-model="address" type="text" class="form-control" placeholder="Nhập địa chỉ">
+                                      </div>
+                                      <div class="form-group my-3">
+                                        <label>Ngày Sinh</label>
+                                        <input ng-model="birthday" type="date" class="form-control" placeholder="Nhập địa chỉ">
+                                      </div>
+                                    <button class="btn btn-primary mb-3">Thêm</button>
+                                </form>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="showForm mt-3 m-x-3" ng-if="submitted">
+                                    <div class="my-2">
+                                        <strong>MSSV</strong>: <span class="text-danger fw-bold">{{ mssv | uppercase }}</span>
+                                    </div>
+                                    <div class="my-2">
+                                        <strong>Họ và tên</strong>: <span class="text-primary fw-bold">{{ fullName }}</span>
+                                    </div>
+                                    <div class="my-2">
+                                        <strong>Giới tính</strong>: <span>{{ gender }}</span>
+                                    </div>
+                                    <div class="my-2">
+                                        <strong>Địa chỉ</strong>: <span>{{ address }}</span>
+                                    </div>
+                                    <div class="my-2">
+                                        <strong>Ngày sinh</strong>: <span>{{ birthday | dateFormat }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listStudents border mt-3 rounded" ng-controller="controllerShop">
+                        <div class="title border border-top py-2 px-3 fw-bold bg-light">Danh Sách Sinh Viên</div>
+                        <div class="list-students">
+                            <table class="table table-primary mb-0">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Mã SV</th>
+                                    <th scope="col">Ảnh</th>
+                                    <th scope="col">Họ Và Tên</th>
+                                    <th scope="col">Tuổi</th>
+                                    <th scope="col">Giới tính</th>
+                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">Ngày sinh</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr ng-repeat="i in dataStudents" class="justify-content-center">
+                                    <th class="align-middle text-center">{{ i.studentCode }}</th>
+                                    <td><img src="./images/{{ i.image }}" width="100px" alt="img"></td>
+                                    <td class="align-middle text-center">{{ i.fullName }}</td>
+                                    <td class="align-middle text-center">{{ i.age }}</td>
+                                    <td class="align-middle text-center">{{ i.gender }}</td>
+                                    <td class="align-middle text-center">{{ i.address }}</td>
+                                    <td class="align-middle text-center">{{ i.birthday }}</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="calculator border mt-3 rounded" ng-controller="controllerShop">
+                        <div class="title border border-top py-2 px-3 fw-bold bg-light">TÍNH TOÁN CHI VI & DIỆN TÍCH</div>
+                        <div class="list-students">
+                            <form class="row px-3">
+                                <div class="col-6 form-group my-3">
+                                    <label>Chiều dài</label>
+                                    <input type="number" class="form-control" ng-model="length">
+                                </div>
+                                <div class="col-6 form-group my-3">
+                                    <label>Chiều rộng</label>
+                                    <input type="number" class="form-control" ng-model="width">
+                                </div>
+                                <div class="col-6 form-group my-3">
+                                    <label>Chi vi</label>
+                                    <input type="text" class="form-control" ng-value="calculatePerimeter()" readonly>
+                                </div>
+                                <div class="col-6 form-group my-3">
+                                    <label>Diện tích</label>
+                                    <input type="text" class="form-control" ng-value="calculateArea()" readonly>
+                                </div>
+                                <div class="col-2 my-3">
+                                    <button class="btn btn-primary" ng-click="calculate()">Xác Nhận</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed bg-light rounded-top" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Phát triền phần mền
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Môn học 1
+                                        <span class="badge rounded-pill bg-primary">12</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 2
+                                        <span class="badge rounded-pill bg-primary">2</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 3
+                                        <span class="badge rounded-pill bg-primary">22</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 4
+                                        <span class="badge rounded-pill bg-primary">24</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 5
+                                        <span class="badge rounded-pill bg-primary">11</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed bg-light rounded-top" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Lập trìng web
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Môn học 1
+                                        <span class="badge rounded-pill bg-primary">12</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 2
+                                        <span class="badge rounded-pill bg-primary">2</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 3
+                                        <span class="badge rounded-pill bg-primary">22</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 4
+                                        <span class="badge rounded-pill bg-primary">24</span>
+                                    </li>
+                                    <li class="list-group-item">Môn học 5
+                                        <span class="badge rounded-pill bg-primary">11</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
 
