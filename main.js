@@ -7,6 +7,11 @@ app.controller("controllerShop", function ($scope) {
 
     $scope.sendData = function () {
         $scope.submitted = true;
+    
+        $scope.timeNow = new Date(); // Lấy thời gian hiện tại
+        $scope.yearNow = $scope.timeNow.getFullYear(); // Lấy năm hiện tại
+        $scope.yearBirthday = $scope.birthday.getFullYear(); // Lấy năm sinh
+        $scope.age = $scope.yearNow - $scope.yearBirthday; // Tính tuổi
     }
 
     $scope.calculate = function () {
