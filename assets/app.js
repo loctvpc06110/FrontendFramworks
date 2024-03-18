@@ -72,3 +72,10 @@ function myFunction($scope) {
     }
 }
 
+app.container("parentController", function($scope){
+    $scope.nameCtrl1 = 'ThaiLoc';
+})
+
+app.container("childController", function($scope){
+    $scope.nameCtrl2 = 'LocKar';
+})
