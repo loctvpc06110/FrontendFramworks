@@ -23,3 +23,7 @@ i.sale {
     overflow: hidden;
     text-overflow: ellipsis; 
 }
+
+a.active {
+    color: black;
+}
